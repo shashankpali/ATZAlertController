@@ -27,8 +27,8 @@
 @property (nonatomic, strong)  UIWindow * _Nullable alertWindow;
 
 + (nonnull ATZAlertController *)title:(NSString * _Nonnull)title
-                               message:(NSString * _Nonnull)message
-                     cancelButtonTitle:(NSString * _Nonnull)cancel
+                               message:(NSString * _Nullable)message
+                     cancelButtonTitle:(NSString * _Nullable)cancel
                 destructiveButtonTitle:(NSString * _Nullable)destructive
                      otherButtonTitles:(NSArray  * _Nullable)titleArray
                         preferredStyle:(UIAlertControllerStyle)style

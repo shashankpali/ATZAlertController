@@ -29,22 +29,22 @@ typedef void(^actionHandler)(UIAlertAction * _Nonnull action , NSString * _Nonnu
 @interface ATZAlertController : UIAlertController
 
 /**
-*  Show alert with string array
-*
-*  @param title       Alert title.
-*  @param message     Alert message.
-*  @param cancel      Cancel title (Tapping leads to dismiss controller ONLY).
-*  @param destructive Destructive title (Tapping leads to CALLBACK in block).
-*  @param titleArray  Create other button with respect to array (Tapping leads to CALLBACK
-                      in block respectively).
-*  @param style       style description(Declare whether its Alert or ActionSheet).
-*  @param showAlert   Derive to show alert immediately or leave it to user to call SHOW
-                      function.
-*  @param handler     handler description(Return the respective action and title of tapped
-                      button).
-*
-*  @return return ATZAlertController object
-*/
+ *  Show alert with string array
+ *
+ *  @param title       Alert title.
+ *  @param message     Alert message.
+ *  @param cancel      Cancel title (Tapping leads to dismiss controller ONLY).
+ *  @param destructive Destructive title (Tapping leads to CALLBACK in block).
+ *  @param titleArray  Create other button with respect to array (Tapping leads to CALLBACK
+ in block respectively).
+ *  @param style       style description(Declare whether its Alert or ActionSheet).
+ *  @param showAlert   Derive to show alert immediately or leave it to user to call SHOW
+ function.
+ *  @param handler     handler description(Return the respective action and title of tapped
+ button).
+ *
+ *  @return return ATZAlertController object
+ */
 + (nonnull instancetype)alertWithTitle:(NSString * _Nonnull)title
                                message:(NSString * _Nonnull)message
                      cancelButtonTitle:(NSString * _Nonnull)cancel
@@ -93,6 +93,26 @@ typedef void(^actionHandler)(UIAlertAction * _Nonnull action , NSString * _Nonnu
                      cancelButtonTitle:(NSString * _Nonnull)cancel
                     showAlertInstantly:(BOOL)showAlert;
 /**
+ *  Show Login Alert
+ *
+ *  @param title         Alert title.
+ *  @param message       Alert message.
+ *  @param usernameTitle Shows placeholder text.
+ *  @param usernameTitle Shows placeholder text.
+ *  @param showAlert     Derive to show alert immediately or leave it to user to call SHOW
+                         function.
+ *  @param handler       handler description(Return the respective action and title of tapped
+                         button).
+ *
+ *  @return return ATZAlertController object.
+ */
++ (nonnull instancetype)loginAlertWithTitle:(NSString * _Nonnull)title
+                                    message:(NSString * _Nullable)message
+                   userNamePlaceholderTitle:(NSString * _Nonnull)usernameTitle
+                   passwordPlaceholderTitle:(NSString * _Nonnull)passwordTitle
+                         showAlertInstantly:(BOOL)showAlert
+                                      block:(nullable actionHandler)handler;
+/**
  *  Call show alert
  */
 - (void)show;
@@ -108,8 +128,8 @@ typedef void(^actionHandler)(UIAlertAction * _Nonnull action , NSString * _Nonnu
 
 @interface ATZActionButton : NSObject
 /**
- *  Create ATZActionButton (Recommended for [Show alert with ATZActionButton array]  
-                           function).
+ *  Create ATZActionButton (Recommended for [Show alert with ATZActionButton array]
+    function).
  *
  *  @param title Button title
  *  @param style Button style(Derive whether its default,cancel or destructive).

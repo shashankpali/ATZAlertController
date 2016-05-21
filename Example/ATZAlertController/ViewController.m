@@ -91,6 +91,15 @@
       
       break;
     }
+    case 3:{
+      
+      [ATZAlertController loginAlertWithTitle:@"Login" message:nil userNamePlaceholderTitle:@"Username" passwordPlaceholderTitle:@"Password" showAlertInstantly:YES block:^(UIAlertAction * _Nonnull action, NSString * _Nonnull titleString) {
+        
+        
+      }];
+      
+      break;
+    }
       
     default:
       break;

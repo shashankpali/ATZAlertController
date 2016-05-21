@@ -113,6 +113,31 @@
   return alert;
 }
 
++ (nonnull instancetype)loginAlertWithTitle:(NSString *)title
+                                    message:(NSString *)message
+                   userNamePlaceholderTitle:(NSString *)usernameTitle
+                   passwordPlaceholderTitle:(NSString * _Nonnull)passwordTitle
+                         showAlertInstantly:(BOOL)showAlert
+                                      block:(nullable actionHandler)handler
+{
+  ATZAlertController *alert = [ATZAlertController title:title message:message cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@[@"Cancel",@"Login"] preferredStyle:UIAlertControllerStyleAlert block:^(UIAlertAction * _Nonnull action, NSString * _Nonnull titleString) {
+    
+    
+  }];
+  [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+    textField.placeholder = usernameTitle;
+  }];
+  [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+    textField.placeholder = passwordTitle;
+    textField.secureTextEntry = YES;
+  }];
+  if (showAlert)
+  {
+    [alert show];
+  }
+  return alert;
+}
+
 @end
 
 #pragma mark - ATZActionButton
