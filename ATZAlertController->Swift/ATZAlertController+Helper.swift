@@ -1,4 +1,4 @@
-// ATZAlertController.h
+// ATZAlertController+Helper.swift
 //
 // Copyright (c) 2016 Shashank Pali
 //
@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 //
+
 import UIKit
 import Foundation
 import ObjectiveC

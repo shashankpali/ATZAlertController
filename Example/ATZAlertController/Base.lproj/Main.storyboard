@@ -19,47 +19,72 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vv-rp-eSx">
-                                <rect key="frame" x="177" y="220" width="246" height="160"/>
+                                <rect key="frame" x="25" y="220" width="550" height="160"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLZ-Vi-viQ">
-                                        <rect key="frame" x="40" y="46" width="165" height="30"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLZ-Vi-viQ">
+                                        <rect key="frame" x="197" y="46" width="155" height="30"/>
                                         <state key="normal" title="Alert With String Array"/>
                                         <connections>
                                             <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7qq-xA-DuG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRx-qh-xHS">
-                                        <rect key="frame" x="8" y="84" width="230" height="30"/>
-                                        <state key="normal" title="Alert With ATZActionButton Array"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRx-qh-xHS">
+                                        <rect key="frame" x="89" y="84" width="371" height="30"/>
+                                        <state key="normal" title="Alert With ATZActionButton Array (Without Animation)"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.numberOfLines">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rdc-CJ-2N1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faE-3P-lAP">
-                                        <rect key="frame" x="40" y="8" width="165" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faE-3P-lAP">
+                                        <rect key="frame" x="233" y="8" width="84" height="30"/>
                                         <state key="normal" title="Simple Alert"/>
                                         <connections>
                                             <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ze-cg-nqM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ust-Df-CUg">
-                                        <rect key="frame" x="68" y="122" width="110" height="30"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ust-Df-CUg">
+                                        <rect key="frame" x="219" y="122" width="110" height="30"/>
                                         <state key="normal" title="Alert With Login"/>
                                         <connections>
                                             <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ufc-om-UnI"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="faE-3P-lAP" firstAttribute="centerX" secondItem="8Vv-rp-eSx" secondAttribute="centerX" id="1fd-qh-AV0"/>
+                                    <constraint firstItem="fRx-qh-xHS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Vv-rp-eSx" secondAttribute="leading" id="5Qj-Qn-8DO"/>
                                     <constraint firstAttribute="width" secondItem="8Vv-rp-eSx" secondAttribute="height" multiplier="123:80" id="EZ7-GE-G3O"/>
+                                    <constraint firstItem="VLZ-Vi-viQ" firstAttribute="centerX" secondItem="fRx-qh-xHS" secondAttribute="centerX" id="PVI-h4-VVY"/>
+                                    <constraint firstItem="ust-Df-CUg" firstAttribute="top" secondItem="fRx-qh-xHS" secondAttribute="bottom" constant="8" id="RHY-it-O8O"/>
+                                    <constraint firstItem="fRx-qh-xHS" firstAttribute="top" secondItem="VLZ-Vi-viQ" secondAttribute="bottom" constant="8" id="TOo-Oy-Pp8"/>
+                                    <constraint firstItem="VLZ-Vi-viQ" firstAttribute="top" secondItem="faE-3P-lAP" secondAttribute="bottom" constant="8" id="Vd1-XK-Mn1"/>
+                                    <constraint firstAttribute="bottom" secondItem="ust-Df-CUg" secondAttribute="bottom" constant="8" id="WBX-ch-Vdb"/>
                                     <constraint firstAttribute="height" constant="160" id="c7W-Ie-5RE"/>
+                                    <constraint firstItem="faE-3P-lAP" firstAttribute="centerX" secondItem="VLZ-Vi-viQ" secondAttribute="centerX" id="j4U-uR-uB8"/>
+                                    <constraint firstItem="ust-Df-CUg" firstAttribute="centerX" secondItem="fRx-qh-xHS" secondAttribute="centerX" id="jVV-xj-kqm"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fRx-qh-xHS" secondAttribute="trailing" id="wmT-Ws-wF2"/>
+                                    <constraint firstItem="faE-3P-lAP" firstAttribute="top" secondItem="8Vv-rp-eSx" secondAttribute="top" constant="8" id="yFf-fU-1Ka"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EZ7-GE-G3O"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8Vv-rp-eSx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="1z1-Ca-W2W"/>
                             <constraint firstItem="8Vv-rp-eSx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DJ7-xg-95E"/>
+                            <constraint firstAttribute="trailing" secondItem="8Vv-rp-eSx" secondAttribute="trailing" constant="25" id="Djf-Lw-2Bi"/>
                             <constraint firstItem="8Vv-rp-eSx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q40-uu-9dQ"/>
                         </constraints>
                     </view>
