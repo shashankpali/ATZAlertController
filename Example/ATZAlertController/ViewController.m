@@ -67,7 +67,8 @@
       ATZActionButton *button2 = [ATZActionButton actionWithTitle:@"Remove" preferredStyle:UIAlertActionStyleDestructive];
       
       alert = [ATZAlertController alertWithTitle:@"My Alert"
-                                         message:@"Array containing object string" cancelButtonTitle:@"Cancel"
+                                         message:@"Array containing object ATZActionButton"
+                               cancelButtonTitle:@"Cancel"
                                otherActionButton:@[button1,button2]
                                   preferredStyle:UIAlertControllerStyleAlert
                               showAlertInstantly:NO

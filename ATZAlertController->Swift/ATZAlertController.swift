@@ -61,8 +61,7 @@ public class ATZAlertController: UIAlertController
    in block respectively).
    - parameter preferredStyle:         Style description(Declare whether its Alert or ActionSheet).
    - parameter showAlertInstantly:     Derive to show alert immediately or leave it to user to call SHOW
-   - parameter handler:                Handler description(Return the respective action and title of tapped
-   button).
+   - parameter handler:                Handler description(Return the respective action and title of tapped button).
    
    
    - returns: return ATZAlertController object
@@ -82,10 +81,9 @@ public class ATZAlertController: UIAlertController
                                                    destructive: destructiveButtonTitle,
                                                    titleArray: otherButtonTitles,
                                                    style: preferredStyle) {
-                                                    if(handler != nil)
-                                                    {
-                                                      handler!(action: $0, titleString: $1)
-                                                    }
+                                                    
+                                                    handler?(action: $0, titleString: $1)
+                                                    
     }
     if (showAlertInstantly)
     {
@@ -103,8 +101,7 @@ public class ATZAlertController: UIAlertController
    in block respectively).
    - parameter preferredStyle:     Style description(Declare whether its Alert or ActionSheet).
    - parameter showAlertInstantly: Derive to show alert immediately or leave it to user to call SHOW
-   - parameter handler:            Handler description(Return the respective action and title of tapped
-   button).
+   - parameter handler:            Handler description(Return the respective action and title of tapped button).
    
    - returns: return ATZAlertController object
    */
@@ -122,10 +119,9 @@ public class ATZAlertController: UIAlertController
                                                    destructive: nil,
                                                    titleArray: otherActionButton,
                                                    style: preferredStyle) {
-                                                    if(handler != nil)
-                                                    {
-                                                      handler!(action: $0, titleString: $1)
-                                                    }
+                                                    
+                                                    handler?(action: $0, titleString: $1)
+                                                    
     }
     if (showAlertInstantly)
     {
@@ -140,8 +136,7 @@ public class ATZAlertController: UIAlertController
    - parameter message:            Alert message.
    - parameter cancelButtonTitle:  Cancel title (Tapping leads to dismiss controller ONLY).
    - parameter showAlertInstantly: Derive to show alert immediately or leave it to user to call SHOW
-   - parameter handler:            Handler description(Return the respective action and title of tapped
-   button).
+   - parameter handler:            Handler description(Return the respective action and title of tapped button).
    
    - returns: return ATZAlertController object
    */
@@ -157,10 +152,9 @@ public class ATZAlertController: UIAlertController
                                                    destructive: nil,
                                                    titleArray: nil,
                                                    style: .Alert) {
-                                                    if(handler != nil)
-                                                    {
-                                                      handler!(action: $0, titleString: $1)
-                                                    }
+                                                    
+                                                    handler?(action: $0, titleString: $1)
+                                                    
     }
     if (showAlertInstantly)
     {
@@ -176,8 +170,7 @@ public class ATZAlertController: UIAlertController
    - parameter userNamePlaceholderTitle: Shows placeholder text.
    - parameter passwordPlaceholderTitle: Shows placeholder text.
    - parameter showAlertInstantly:       Derive to show alert immediately or leave it to user to call SHOW
-   - parameter handler:                  Handler description(Return the respective action and title of tapped
-   button).
+   - parameter handler:                  Handler description(Return the respective action and title of tapped button).
    
    - returns: return ATZAlertController object
    */
@@ -193,8 +186,8 @@ public class ATZAlertController: UIAlertController
                                                    cancel: nil,
                                                    destructive: nil,
                                                    titleArray: ["Login","Cancel"],
-                                                   style: .Alert) { (action, titleString) in
-                                                    
+                                                   style: .Alert) {
+                                                    handler?(action: $0, titleString: $1)
     }
     alert.addTextFieldWithConfigurationHandler {
       $0.placeholder = userNamePlaceholderTitle
@@ -221,10 +214,8 @@ public class ATZActionButton: NSObject
   /**
    Create ATZActionButton (Recommended for [Show alert with ATZActionButton array]
    function).
-   
    - parameter title: Button title
    - parameter style: Button style(Derive whether its default,cancel or destructive).
-   
    - returns: return ATZActionButton object.
    */
   public class func actionWithTitleAndPrefferedStyle(title: String, style: UIAlertActionStyle) -> ATZActionButton

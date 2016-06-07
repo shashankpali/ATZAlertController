@@ -25,7 +25,7 @@ import UIKit
 import Foundation
 import ObjectiveC
 
-var ATZWindow: UInt8 = 0
+private var ATZWindow: UInt8 = 0
 
 extension ATZAlertController
 {
