@@ -37,32 +37,35 @@
 {
   ATZAlertController *alert = [ATZAlertController alertControllerWithTitle:title message:message preferredStyle:style];
   
-  for (id obj in titleArray)
+  if (titleArray != nil)
   {
-    UIAlertAction *action = nil;
-    
-    if ([obj isKindOfClass:[NSString class]])
+    for (id obj in titleArray)
     {
-      action = [UIAlertAction actionWithTitle:obj style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
-                {
-                  if (handler) {
-                    handler(action , action.title);
-                  }
-                }];
-    }
-    else
-    {
-      ATZActionButton *ATZButton = (ATZActionButton *)obj;
+      UIAlertAction *action = nil;
       
-      action = [UIAlertAction actionWithTitle:ATZButton.title style:ATZButton.style handler:^(UIAlertAction * _Nonnull action)
-                {
-                  if (handler) {
-                    handler(action , action.title);
-                  }
-                }];
+      if ([obj isKindOfClass:[NSString class]])
+      {
+        action = [UIAlertAction actionWithTitle:obj style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
+                  {
+                    if (handler) {
+                      handler(action , action.title);
+                    }
+                  }];
+      }
+      else
+      {
+        ATZActionButton *ATZButton = (ATZActionButton *)obj;
+        
+        action = [UIAlertAction actionWithTitle:ATZButton.title style:ATZButton.style handler:^(UIAlertAction * _Nonnull action)
+                  {
+                    if (handler) {
+                      handler(action , action.title);
+                    }
+                  }];
+      }
+      
+      [alert addAction:action];
     }
-    
-    [alert addAction:action];
   }
   
   if (cancel)

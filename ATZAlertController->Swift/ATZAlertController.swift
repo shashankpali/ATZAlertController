@@ -69,8 +69,8 @@ public class ATZAlertController: UIAlertController
   public class func alertWithTitle(title: String,
                                    message: String,
                                    cancelButtonTitle: String,
-                                   destructiveButtonTitle: String,
-                                   otherButtonTitles: [String],
+                                   destructiveButtonTitle: String?,
+                                   otherButtonTitles: [String]?,
                                    preferredStyle: UIAlertControllerStyle,
                                    showAlertInstantly: Bool,
                                    handler: actionHandler?) -> ATZAlertController

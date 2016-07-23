@@ -48,8 +48,8 @@ typedef void(^actionHandler)(UIAlertAction * _Nonnull action , NSString * _Nonnu
 + (nonnull instancetype)alertWithTitle:(NSString * _Nonnull)title
                                message:(NSString * _Nonnull)message
                      cancelButtonTitle:(NSString * _Nonnull)cancel
-                destructiveButtonTitle:(NSString * _Nonnull)destructive
-                     otherButtonTitles:(NSArray <NSString *>* _Nonnull)titleArray
+                destructiveButtonTitle:(NSString * _Nullable)destructive
+                     otherButtonTitles:(NSArray <NSString *>* _Nullable)titleArray
                         preferredStyle:(UIAlertControllerStyle)style
                     showAlertInstantly:(BOOL)showAlert
                                  block:(nullable actionHandler)handler;
