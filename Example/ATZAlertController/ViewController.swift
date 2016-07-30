@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  ATZAlertController->Swift
+//  ATZAlertController
 //
-//  Created by ABS_MAC02 on 06/06/16.
-//  Copyright © 2016 abhi. All rights reserved.
+//  Created by Shashank Pali on 06/06/16.
+//  Copyright © 2016 shashank. All rights reserved.
 //
 
 import UIKit

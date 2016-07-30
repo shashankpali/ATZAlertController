@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.2.1](https://github.com/shashankpali/ATZAlertController/releases/tag/1.2.1)
+Released on Saturday, 30 July, 2016.
+
+#### Removed
+* Objective code.
+
 ## [1.2](https://github.com/shashankpali/ATZAlertController/releases/tag/1.2)
 Released on Saturday, 23 July, 2016.
 

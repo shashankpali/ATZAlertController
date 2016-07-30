@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ATZAlertController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,17 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vv-rp-eSx">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QR6-Fc-LTY">
                                 <rect key="frame" x="25" y="220" width="550" height="160"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLZ-Vi-viQ">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxh-N8-f6p">
                                         <rect key="frame" x="197" y="46" width="155" height="30"/>
                                         <state key="normal" title="Alert With String Array"/>
                                         <connections>
-                                            <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7qq-xA-DuG"/>
+                                            <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ie-5Q-h1F"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRx-qh-xHS">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU4-F3-psD">
                                         <rect key="frame" x="89" y="84" width="371" height="30"/>
                                         <state key="normal" title="Alert With ATZActionButton Array (Without Animation)"/>
                                         <userDefinedRuntimeAttributes>
@@ -40,58 +40,58 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rdc-CJ-2N1"/>
+                                            <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qqa-gB-WbD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faE-3P-lAP">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcA-Qz-ytu">
                                         <rect key="frame" x="233" y="8" width="84" height="30"/>
                                         <state key="normal" title="Simple Alert"/>
                                         <connections>
-                                            <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ze-cg-nqM"/>
+                                            <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9uL-JZ-ZHc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ust-Df-CUg">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9E-3X-dbs">
                                         <rect key="frame" x="219" y="122" width="110" height="30"/>
                                         <state key="normal" title="Alert With Login"/>
                                         <connections>
-                                            <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ufc-om-UnI"/>
+                                            <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Taj-un-NTh"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="faE-3P-lAP" firstAttribute="centerX" secondItem="8Vv-rp-eSx" secondAttribute="centerX" id="1fd-qh-AV0"/>
-                                    <constraint firstItem="fRx-qh-xHS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Vv-rp-eSx" secondAttribute="leading" id="5Qj-Qn-8DO"/>
-                                    <constraint firstAttribute="width" secondItem="8Vv-rp-eSx" secondAttribute="height" multiplier="123:80" id="EZ7-GE-G3O"/>
-                                    <constraint firstItem="VLZ-Vi-viQ" firstAttribute="centerX" secondItem="fRx-qh-xHS" secondAttribute="centerX" id="PVI-h4-VVY"/>
-                                    <constraint firstItem="ust-Df-CUg" firstAttribute="top" secondItem="fRx-qh-xHS" secondAttribute="bottom" constant="8" id="RHY-it-O8O"/>
-                                    <constraint firstItem="fRx-qh-xHS" firstAttribute="top" secondItem="VLZ-Vi-viQ" secondAttribute="bottom" constant="8" id="TOo-Oy-Pp8"/>
-                                    <constraint firstItem="VLZ-Vi-viQ" firstAttribute="top" secondItem="faE-3P-lAP" secondAttribute="bottom" constant="8" id="Vd1-XK-Mn1"/>
-                                    <constraint firstAttribute="bottom" secondItem="ust-Df-CUg" secondAttribute="bottom" constant="8" id="WBX-ch-Vdb"/>
-                                    <constraint firstAttribute="height" constant="160" id="c7W-Ie-5RE"/>
-                                    <constraint firstItem="faE-3P-lAP" firstAttribute="centerX" secondItem="VLZ-Vi-viQ" secondAttribute="centerX" id="j4U-uR-uB8"/>
-                                    <constraint firstItem="ust-Df-CUg" firstAttribute="centerX" secondItem="fRx-qh-xHS" secondAttribute="centerX" id="jVV-xj-kqm"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fRx-qh-xHS" secondAttribute="trailing" id="wmT-Ws-wF2"/>
-                                    <constraint firstItem="faE-3P-lAP" firstAttribute="top" secondItem="8Vv-rp-eSx" secondAttribute="top" constant="8" id="yFf-fU-1Ka"/>
+                                    <constraint firstItem="KcA-Qz-ytu" firstAttribute="centerX" secondItem="QR6-Fc-LTY" secondAttribute="centerX" id="4X0-Os-EEo"/>
+                                    <constraint firstAttribute="height" constant="160" id="8OU-94-XT7"/>
+                                    <constraint firstItem="Dxh-N8-f6p" firstAttribute="top" secondItem="KcA-Qz-ytu" secondAttribute="bottom" constant="8" id="Fjr-ih-zwv"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oU4-F3-psD" secondAttribute="trailing" id="LHK-Oz-6wZ"/>
+                                    <constraint firstItem="oU4-F3-psD" firstAttribute="top" secondItem="Dxh-N8-f6p" secondAttribute="bottom" constant="8" id="Mbk-es-Ylw"/>
+                                    <constraint firstItem="Q9E-3X-dbs" firstAttribute="top" secondItem="oU4-F3-psD" secondAttribute="bottom" constant="8" id="aK7-Ow-CBS"/>
+                                    <constraint firstItem="KcA-Qz-ytu" firstAttribute="top" secondItem="QR6-Fc-LTY" secondAttribute="top" constant="8" id="et1-YL-cKM"/>
+                                    <constraint firstItem="KcA-Qz-ytu" firstAttribute="centerX" secondItem="Dxh-N8-f6p" secondAttribute="centerX" id="i1T-SN-kyp"/>
+                                    <constraint firstItem="oU4-F3-psD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QR6-Fc-LTY" secondAttribute="leading" id="pjH-eb-cHc"/>
+                                    <constraint firstItem="Q9E-3X-dbs" firstAttribute="centerX" secondItem="oU4-F3-psD" secondAttribute="centerX" id="srv-e4-IDP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Q9E-3X-dbs" secondAttribute="bottom" constant="8" id="tBG-49-yUr"/>
+                                    <constraint firstAttribute="width" secondItem="QR6-Fc-LTY" secondAttribute="height" multiplier="123:80" id="wCj-50-dZG"/>
+                                    <constraint firstItem="Dxh-N8-f6p" firstAttribute="centerX" secondItem="oU4-F3-psD" secondAttribute="centerX" id="yYX-1d-HAp"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="EZ7-GE-G3O"/>
+                                        <exclude reference="wCj-50-dZG"/>
                                     </mask>
                                 </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8Vv-rp-eSx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="1z1-Ca-W2W"/>
-                            <constraint firstItem="8Vv-rp-eSx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DJ7-xg-95E"/>
-                            <constraint firstAttribute="trailing" secondItem="8Vv-rp-eSx" secondAttribute="trailing" constant="25" id="Djf-Lw-2Bi"/>
-                            <constraint firstItem="8Vv-rp-eSx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q40-uu-9dQ"/>
+                            <constraint firstItem="QR6-Fc-LTY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="GJo-VA-u7L"/>
+                            <constraint firstItem="QR6-Fc-LTY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Xeb-SQ-lb1"/>
+                            <constraint firstItem="QR6-Fc-LTY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h64-oj-72a"/>
+                            <constraint firstAttribute="trailing" secondItem="QR6-Fc-LTY" secondAttribute="trailing" constant="25" id="ltw-h3-v4K"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="430" y="298"/>
+            <point key="canvasLocation" x="375" y="-10"/>
         </scene>
     </scenes>
 </document>
